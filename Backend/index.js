@@ -15,7 +15,7 @@ const productRoutes = require('./routes/productRoutes');
 
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("Connected to MongoDB successfully prasad"))
@@ -30,6 +30,6 @@ app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
 })
 
-app.use('/home',(req, res)=>{
+app.use('/',(req, res)=>{
     res.send("Hello Prasad from express server");
 })
