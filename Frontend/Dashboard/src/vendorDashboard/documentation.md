@@ -1,4 +1,7 @@
 components vendorDashboard
+            Navbar
+            Sidebar
+            All products
 
 forms: Vendor_register
         Vendor_login
